@@ -11,6 +11,10 @@ app = Flask(__name__)
 def main():
     return render_template("index.html")
 
+@app.route("/meurepo")
+def meurepo():
+    return "meu repositório docker"
+
 
 if __name__ == "__main__":
     port = int(os.getenv("APP_PORT", "5050"))
